@@ -31,7 +31,7 @@ Exemple : `docker compose run --rm api npm install`
 - Exécuter une commande dans un container __déjà démarré__ :
 `docker exec -ti <container id> <commande>`
 
-# Suppression de tous les services
+## Suppression de tous les services Docker
 
 `docker compose down`
 
