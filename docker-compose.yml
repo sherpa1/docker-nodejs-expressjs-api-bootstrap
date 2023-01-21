@@ -3,8 +3,10 @@ version: '3.9'
 services:
   api:
     image: node:alpine
-    container_name: api_nodejs
-    command: 'npm start'
+    container_name: api_node_js
+    #command: npm start #production
+    #command: npm run watch #pour le dévellopement seulement (fonctionne uniquement si Nodemon est installé)
+    command: npm test
     env_file:
       - .env
     working_dir: /usr/src/app
@@ -12,3 +14,9 @@ services:
       - 3333:3000
     volumes:
       - ./api:/usr/src/app
+    networks:
+      - some_network
+
+networks:
+  some_network:
+    driver: bridge
