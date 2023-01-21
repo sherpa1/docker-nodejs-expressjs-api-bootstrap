@@ -4,9 +4,9 @@ services:
   api:
     image: node:alpine
     container_name: api_node_js
-    #command: npm start #production
+    command: npm start #production
     #command: npm run watch #pour le dévellopement seulement (fonctionne uniquement si Nodemon est installé)
-    command: npm test
+    #command: npm test
     env_file:
       - .env
     working_dir: /usr/src/app
