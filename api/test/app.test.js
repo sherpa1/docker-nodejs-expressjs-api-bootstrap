@@ -7,7 +7,7 @@ describe("Test du router index.js", () => {
         expect(response.statusCode).toBe(200);
     });
 
-    test("Réponse au format json attendue {message:'Hello, World !'}", async () => {
+    test("Réponse au format json attendue avec le contenu : {message:'Hello, World !'}", async () => {
         const response = await request(app).get("/").set('accept', 'json');
         expect(response.body.message).toMatch("Hello, World !");
     });
